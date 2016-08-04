@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+    <head>
+        <title>Node JS CHATEK v1.0</title>
+        <meta name="author" content="Emrah KILIÇ">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link href="perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" />
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+		<script src="perfect-scrollbar/jquery.mousewheel.js"></script>
+		<script src="perfect-scrollbar/perfect-scrollbar.js"></script>
+		<script src="script/soundmanager2.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/chat.js"></script>
+    </head>
+    <body>
+	<div class="genel">
+	
+	
+	<div class="giris_ekrani">
+	<p class="baslik">CHATEK'e Hoş Geldiniz İyi Sohbetler...</p>
+	<div class="g_sol">
+			<input type="text" name="kadi" placeholder="Kullanıcı adınızı giriniz..." class="giris"/>
+			<div class="giris_btn">Giriş Yap</div>
+	
+	</div>
+	
+	<div class="g_sag">
+	Öncelikle sayfamızı ziyaret ettiğiniz için teşekkür ediyoruz.<br>
+	Lütfen herhangi bir kullanıcı adı yazarak sisteme giriş yapınız.Eğer sistemde kullanıcı adınızı kullanan başka birileri var ise
+	sayfayı yenileyip yeni bir kullanıcı adı seçiniz.Aksi takdirde yazdığınız mesajlar karışabilir.
+	</div>
+	</div>
+	
+	
+     <div id="genel">
+	 <p class="baslik">Chatek' e Hoş Geldiniz. İyi sohbetler...</p>
+		<div class="sol">
+			<p class="baslik">Kullanıcılar {0}</p>
+			<div id="kullanicilar">
+				<ul class="kullanicilar">
+					
+					
+				
+				</ul>
+			</div>
+			<div class="ozel">
+		<p class="ozelbaslik"><span class="ozelbaslikyaz"></span> <span class="ozelkapa">Kapat</span></p>
+		<div class="ozelmesajgenel">
+		<ul class="ozelmesajlar">
+			
+			
+		</ul>
+		</div>
+		<input class="ozelmesaj" type="text" name="ozelmesaj" placeholder="Mesajınızı buraya yazıp [ENTER]'a basınız..."/>
+		</div>
+		</div>
+		
+		<div class="sag">
+			<div class="yazilanlar">
+				<ul class="yazilar">
+					
+					
+				</ul>
+			</div>
+			<input class="input" type="text" name="mesaj" placeholder="Mesajınızı buraya yazıp [ENTER]'a basınız..."/>
+		</div>
+	 <div style="clear:both"></div>
+	  <div class="renkler">
+	
+		<ul class="renk_sec">
+			<li data="FF0000" title="Kırmızı"></li>
+			<li data="000000" title="Siyah" ></li>
+			<li data="0000FF" title="Mavi"></li>
+			<li data="01DF01" title="Yeşil"></li>
+			<li data="FFBF00" title="Açık Turuncu"></li>
+			<li data="00BFFF" title="Açık Mavi++"></li>
+			<li data="848484" title="Açık Siyah"></li>
+			<li data="2F86F8" title="Açık Mavi"></li>
+			<li data="FE565C" title="Açık Kırmızı"></li>
+			<li data="FE56D7" title="Pembe"></li>
+			<li data="FCF807" title="Sarı"></li>
+			<li data="FC6507" title="Turuncu"></li>
+		</ul>
+	 </div>
+	 <div class="aciklama" >
+	
+	 <ul class="ayarlar">
+		<li data="sound" title="Sesi Kapa"></li>
+		<li data="color" title="Renk Seç"></li>
+	 </ul>
+	 
+	 <div class="islemSonuc">
+		<ul>
+			<li><b>Ses  :</b> { <span style="color:#000">Açık</span> }</li>
+			<li><b>Renk :</b> { <span style="color:#000">Siyah</span> }</li>
+			<li><b>Kadi :</b> { <span style="color:#000">Siyah</span> }</li>
+		</ul>
+	 </div>
+	
+	 </div>
+	 
+	 </div>
+	 </div>
+    </body>
+	
+	<script type="text/javascript">
+soundManager.url = 'swf/'; // path to SoundManager2 SWF files (note trailing slash)
+soundManager.debugMode = false;
+soundManager.consoleOnly = false;
+ 
+function yeni(){
+
+if(kullaniciSes == "open"){
+soundManager.play('ses','ses/yeni.mp3'); //çalacak olan ses dosyamız
+}
+}
+
+function gelen(){
+if(kullaniciSes == "open"){
+soundManager.play('ses','ses/gelen.mp3'); //çalacak olan ses dosyamız
+}
+}
+
+
+
+ 
+</script>
+
+</html>
