@@ -12,7 +12,7 @@ var ozelsohbetsay = 0;
 var adet=0;
 
 
-app.get('/',function(req,res){
+app.get('/index.html',function(req,res){
 	res.sendFile(__dirname+'/index.html');
 });
 
