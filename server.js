@@ -1,7 +1,8 @@
-var port = Number(process.env.PORT || 3300);
-var io = require('socket.io').listen(port); //3000 portunu dinlemeye başladık.
 var express = require('express');
 var app = express();
+var port = Number(process.env.PORT || 3000);
+var server = app.listen(port);
+var io = require('socket.io').listen(server);
 
 var kullanicilar = {};
 var sohbetler = {};
@@ -12,7 +13,7 @@ var ozelsohbetsay = 0;
 var adet=0;
 
 
-app.get('/index.html',function(req,res){
+app.get('/',function(req,res){
 	res.sendFile(__dirname+'/index.html');
 });
 
