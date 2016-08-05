@@ -14,6 +14,7 @@ var adet=0;
 
 
 app.get('/',function(req,res){
+	res.writeHead('Content-Type':'text/html');
 	res.sendFile(__dirname+'/index.html');
 });
 
