@@ -29,6 +29,9 @@ app.get('/js/chat.js',function(req,res){
 app.get('/perfect-scrollbar/jquery.mousewheel.js',function(req,res){
 	res.sendFile(__dirname+'/perfect-scrollbar/jquery.mousewheel.js');
 });
+app.get('/perfect-scrollbar/perfect-scrollbar.css',function(req,res){
+	res.sendFile(__dirname+'/perfect-scrollbar/perfect-scrollbar.css');
+});
 
 app.get('/perfect-scrollbar/perfect-scrollbar.js',function(req,res){
 	res.sendFile(__dirname+'/perfect-scrollbar/perfect-scrollbar.js');
