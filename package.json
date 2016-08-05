@@ -1,15 +1,25 @@
 {
-  "name": "node-example",
+  "name": "chatekv2",
   "version": "1.0.0",
-  "description": "This example is so cool.",
+  "description": "nodejs ozel sohbet",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^0.9.16"
   },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
-  "author": "emrah-kilic",
-  "license": "MIT"
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emrah2330/chatekv2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emrah2330/chatekv2.0/issues"
+  },
+  "homepage": "https://github.com/emrah2330/chatekv2.0#readme"
 }

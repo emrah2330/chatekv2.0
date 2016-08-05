@@ -1,4 +1,8 @@
-var io = require('socket.io').listen(3000); //3000 portunu dinlemeye başladık.
+var port = Number(process.env.PORT || 3000);
+var io = require('socket.io').listen(port); //3000 portunu dinlemeye başladık.
+var express = require('express');
+var app = express();
+
 var kullanicilar = {};
 var sohbetler = {};
 var say=0;
@@ -7,6 +11,10 @@ var ozelsohbetler = {};
 var ozelsohbetsay = 0;
 var adet=0;
 
+
+app.get('/',function(req,res){
+	res.sendFile(__dirname+'/index.html');
+});
 
 
     io.sockets.on('connection', function(socket){ // tüm node işlemlerini kapsayan ana fonksiyonumuz
