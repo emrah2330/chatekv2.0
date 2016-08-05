@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = Number(process.env.PORT || 3000);
+var port = Number(process.env.PORT || 4000);
 var server = app.listen(port);
 var io = require('socket.io').listen(server);
 
