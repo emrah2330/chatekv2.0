@@ -17,6 +17,10 @@ app.get('/',function(req,res){
 	res.sendFile(__dirname+'/index.html');
 });
 
+app.get('/script/soundmanager2.js',function(req,res){
+	res.sendFile(__dirname+'/script/soundmanager2.js');
+});
+
 
     io.sockets.on('connection', function(socket){ // tüm node işlemlerini kapsayan ana fonksiyonumuz
    socket.on("kullaniciEkle", function(data){
