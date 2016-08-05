@@ -1,4 +1,4 @@
-var port = Number(process.env.PORT || 3000);
+var port = Number(process.env.PORT || 3300);
 var io = require('socket.io').listen(port); //3000 portunu dinlemeye başladık.
 var express = require('express');
 var app = express();
