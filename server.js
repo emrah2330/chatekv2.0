@@ -20,6 +20,26 @@ app.get('/',function(req,res){
 	res.sendFile(__dirname+'/index.html');
 });
 
+app.get('/images/user.png',function(req,res){
+	res.sendFile(__dirname+'/images/user.png');
+});
+
+app.get('/images/icon.png',function(req,res){
+	res.sendFile(__dirname+'/images/icon.png');
+});
+
+app.get('/ses/yeni.mp3',function(req,res){
+	res.sendFile(__dirname+'/ses/yeni.mp3');
+});
+
+app.get('/ses/gelen.mp3',function(req,res){
+	res.sendFile(__dirname+'/ses/gelen.mp3');
+});
+
+app.get('/swf',function(req,res){
+	res.sendFile(__dirname+'/swf/');
+});
+
 app.get('/script/soundmanager2.js',function(req,res){
 	res.sendFile(__dirname+'/script/soundmanager2.js');
 });

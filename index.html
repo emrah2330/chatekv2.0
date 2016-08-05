@@ -109,20 +109,20 @@
     </body>
 	
 	<script type="text/javascript">
-soundManager.url = 'swf/'; // path to SoundManager2 SWF files (note trailing slash)
+soundManager.url = 'https://chatekv2.herokuapp.com/swf/'; // path to SoundManager2 SWF files (note trailing slash)
 soundManager.debugMode = false;
 soundManager.consoleOnly = false;
  
 function yeni(){
 
 if(kullaniciSes == "open"){
-soundManager.play('ses','ses/yeni.mp3'); //çalacak olan ses dosyamız
+soundManager.play('ses','https://chatekv2.herokuapp.com/ses/yeni.mp3'); //çalacak olan ses dosyamız
 }
 }
 
 function gelen(){
 if(kullaniciSes == "open"){
-soundManager.play('ses','ses/gelen.mp3'); //çalacak olan ses dosyamız
+soundManager.play('ses','https://chatekv2.herokuapp.com/ses/gelen.mp3'); //çalacak olan ses dosyamız
 }
 }
 
