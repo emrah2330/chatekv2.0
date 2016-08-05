@@ -6,7 +6,7 @@
             $(document).ready(function(){
 				
 		
-					
+					alert();
 				
 			var renk_paleti_ac=0;
 			var sesAcKapa=0;
