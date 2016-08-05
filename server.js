@@ -20,6 +20,19 @@ app.get('/',function(req,res){
 app.get('/script/soundmanager2.js',function(req,res){
 	res.sendFile(__dirname+'/script/soundmanager2.js');
 });
+app.get('/css/style.css',function(req,res){
+	res.sendFile(__dirname+'/css/style.css');
+});
+app.get('/js/chat.js',function(req,res){
+	res.sendFile(__dirname+'/js/chat.js');
+});
+app.get('/perfect-scrollbar/jquery.mousewheel.js',function(req,res){
+	res.sendFile(__dirname+'/perfect-scrollbar/jquery.mousewheel.js');
+});
+
+app.get('/perfect-scrollbar/perfect-scrollbar.js',function(req,res){
+	res.sendFile(__dirname+'/perfect-scrollbar/perfect-scrollbar.js');
+});
 
 
     io.sockets.on('connection', function(socket){ // tüm node işlemlerini kapsayan ana fonksiyonumuz
