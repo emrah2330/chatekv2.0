@@ -1,8 +1,11 @@
-var express = require('express');
-var app = express();
-var port = Number(process.env.PORT || 5000);
-var server = app.listen(port);
-var io = require('socket.io').listen(server);
+
+
+var express = require('express')
+	,app = express();
+  , server = require('http').createServer(app)
+  , io = require('socket.io').listen(server);
+var port = Number(process.env.PORT || 8008);
+server.listen(port);
 
 var kullanicilar = {};
 var sohbetler = {};
