@@ -57,6 +57,8 @@
 			socketTaraf(kadi);
 			
 			
+			}else{
+				$("input.giris").val("");
 			}
 			});
 			
