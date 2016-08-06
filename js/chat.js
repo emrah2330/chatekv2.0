@@ -13,12 +13,12 @@
 			
 			$("ul.ayarlar li:eq(0)").click(function(){
 			if(sesAcKapa == 0){
-			$(this).attr('title','Sesi Aç').css({"background": "url('https://chatekv2.herokuapp.com/images/icon.png') 117px 302px"});
+			$(this).attr('title','Sesi Aç').css({"background": "url('images/icon.png') 117px 302px"});
 			$("div.islemSonuc ul li:eq(0)").html('<b>Ses :</b> { <span style="color:#000">Kapalı</span> }');
 			sesAcKapa++;
 			kullaniciSes='close';
 			}else{
-			$(this).attr('title','Sesi Kapa').css({"background": "url('https://chatekv2.herokuapp.com/images/icon.png') 69px 302px"});
+			$(this).attr('title','Sesi Kapa').css({"background": "url('images/icon.png') 69px 302px"});
 			$("div.islemSonuc ul li:eq(0)").html('<b>Ses :</b> { <span style="color:#000">Açık</span> }');
 			sesAcKapa--;
 			kullaniciSes='open';
@@ -144,7 +144,7 @@ return gonder;
 		
 		
 function socketTaraf(kadi){
-		var socket = io.connect(); // 3000 portuna connect olduk
+		var socket = io.connect("http://localhost:3000"); // 3000 portuna connect olduk
 			
 			socket.on('connect',function(){
 			  socket.emit("kullaniciEkle", {'mesaj':'','renk':'','kadi':ilk_harf_buyuk(kadi),'connect':''});
@@ -223,9 +223,9 @@ function socketTaraf(kadi){
 			
 			if(data.kadi){
 			
-			$("ul.yazilar").append('<li><p class="cizgi"></p><p class="nokta"><span>.</span></p><img src="https://chatekv2.herokuapp.com/images/user.png" alt=""\><p><b style="color:#'+data.renk+'">'+ilk_harf_buyuk(kullaniciadi)+'</b> <span style="font-weight:bold; color:#555;font-size:12px;">diyorki;</span></p><p class="mesaj">'+data.kadi+'</p><p class="onayla"><em class="onay"></em></p><div data="'+simdi+'"></div></li>');
+			$("ul.yazilar").append('<li><p class="cizgi"></p><p class="nokta"><span>.</span></p><img src="images/user.png" alt=""\><p><b style="color:#'+data.renk+'">'+ilk_harf_buyuk(kullaniciadi)+'</b> <span style="font-weight:bold; color:#555;font-size:12px;">diyorki;</span></p><p class="mesaj">'+data.kadi+'</p><p class="onayla"><em class="onay"></em></p><div data="'+simdi+'"></div></li>');
 			}else{
-			$("ul.yazilar").append('<li><p class="cizgi"></p><p class="nokta"><span>.</span></p><img style="border:1px solid #'+data.renk+'" src="https://chatekv2.herokuapp.com/images/user.png" alt=""\><p><b style="color:#'+data.renk+'">'+ilk_harf_buyuk(kullaniciadi)+'</b> <span style="font-weight:bold; color:#555; font-size:12px;">diyorki;</span></p><p class="mesaj" style="color:#'+data.renk+'">'+data.mesaj+'</p><p class="onayla"><em class="onay"></em></p><div data="'+simdi+'"></div></li>');
+			$("ul.yazilar").append('<li><p class="cizgi"></p><p class="nokta"><span>.</span></p><img style="border:1px solid #'+data.renk+'" src="images/user.png" alt=""\><p><b style="color:#'+data.renk+'">'+ilk_harf_buyuk(kullaniciadi)+'</b> <span style="font-weight:bold; color:#555; font-size:12px;">diyorki;</span></p><p class="mesaj" style="color:#'+data.renk+'">'+data.mesaj+'</p><p class="onayla"><em class="onay"></em></p><div data="'+simdi+'"></div></li>');
 			}
 			scrol=scrol+70;
 			$('div.yazilanlar').perfectScrollbar("update").scrollTop(scrol);
@@ -264,7 +264,7 @@ function socketTaraf(kadi){
         // Kullanıcı isimlerini ekrana yaz
         $.each(kullanicilar, function(key, value){
 			
-		$("ul.kullanicilar").append('<li sohbetadi="bos" data="'+key+'"><img style="border:1px solid #'+value.color+'" src="https://chatekv2.herokuapp.com/images/user.png" alt=""\> <p style="color:#'+value.color+'">'+key+'</p><span class="online"></span></li>');
+		$("ul.kullanicilar").append('<li sohbetadi="bos" data="'+key+'"><img style="border:1px solid #'+value.color+'" src="images/user.png" alt=""\> <p style="color:#'+value.color+'">'+key+'</p><span class="online"></span></li>');
 		$('div#kullanicilar').perfectScrollbar("update");
 		
 		//Kullanıcı adedinin bulunması
@@ -351,7 +351,7 @@ function socketTaraf(kadi){
 					if($("span.kadi").text() == veri.kime){
 					var simdi = new Date().getTime() / 1000; 
 			simdi = Math.floor(simdi);
-			$("ul.yazilar").append('<li><p class="cizgi"></p><p class="nokta"><span>.</span></p><img style="border:1px solid red" src="https://chatekv2.herokuapp.com/images/user.png" alt=""\><p><b style="color:red">Sistem</b> <span style="font-weight:bold; color:#555; font-size:12px;">diyorki;</span></p><p class="mesaj" style="color:red">'+veri.islem+'</p><p class="onayla"><em class="onay"></em></p><div data="'+simdi+'"></div></li>');
+			$("ul.yazilar").append('<li><p class="cizgi"></p><p class="nokta"><span>.</span></p><img style="border:1px solid red" src="images/user.png" alt=""\><p><b style="color:red">Sistem</b> <span style="font-weight:bold; color:#555; font-size:12px;">diyorki;</span></p><p class="mesaj" style="color:red">'+veri.islem+'</p><p class="onayla"><em class="onay"></em></p><div data="'+simdi+'"></div></li>');
 			scrol=scrol+70;
 			$('div.yazilanlar').perfectScrollbar("update").scrollTop(scrol);
 			yeni();//ses dosyası
