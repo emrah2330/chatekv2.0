@@ -144,7 +144,7 @@ return gonder;
 		
 		
 function socketTaraf(kadi){
-		var socket = io.connect("http://localhost:3000"); // 3000 portuna connect olduk
+		var socket = io.connect(); // 3000 portuna connect olduk
 			
 			socket.on('connect',function(){
 			  socket.emit("kullaniciEkle", {'mesaj':'','renk':'','kadi':ilk_harf_buyuk(kadi),'connect':''});
