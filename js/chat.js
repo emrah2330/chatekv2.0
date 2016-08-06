@@ -77,9 +77,11 @@
             
 			$("input.input").keypress(function(e){
 			if(e.which == 13){
-			var mesaj=$.trim($(this).val());
+			var mesaj=decodeEntities($(this).val());
 			if(mesaj){
 		$("input.input").keypress();
+			}else{
+				alert('Güzel şeyler yazıp göndermeyi deneyin ! :)');
 			}
 			}
 			});
@@ -359,7 +361,7 @@ function socketTaraf(kadi){
 	
 			$("input.ozelmesaj").keypress(function(e){
 			if(e.which == 13){
-			var ozelmesaj=$.trim($(this).val());
+			var ozelmesaj=decodeEntities($(this).val());
 			if(ozelmesaj){
 			var kimden = $("span.kadi").text();
 			var kime = $("span.ozelbaslikyaz").text();
@@ -367,6 +369,8 @@ function socketTaraf(kadi){
 			
 			
 			$(this).val("");
+			}else{
+				alert('Güzel şeyler yazıp göndermeyi deneyin ! :)');
 			}
 			}
 			});
@@ -388,7 +392,7 @@ function socketTaraf(kadi){
 
 			$("input.input").keypress(function(e){
 			if(e.which == 13){
-			var mesaj=$.trim($(this).val());
+			var mesaj=decodeEntities($(this).val());
 			if(mesaj){
 		
 			
@@ -397,6 +401,8 @@ function socketTaraf(kadi){
 			
 			
 			$(this).val("");
+			}else{
+				alert('Güzel şeyler yazıp göndermeyi deneyin ! :)');
 			}
 			}
 			});
