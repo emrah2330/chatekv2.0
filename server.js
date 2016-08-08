@@ -62,6 +62,14 @@ app.get('/perfect-scrollbar/perfect-scrollbar.js',function(req,res){
 
 
     io.sockets.on('connection', function(socket){ // tüm node işlemlerini kapsayan ana fonksiyonumuz
+	//bu adlı kullanıcı sohbete yazıyor kısmı
+	socket.on('yazanlar',function(data){
+		var yazanlar = new Array();
+		yazanlar.push(data);
+		socket.broadcast.emit('yazanlarlistele',yazanlar);
+		
+	});
+	
    socket.on("kullaniciEkle", function(data){
         // Kullanıcı session'nda bilgileri saklıyoruz
 		var kullaniciadi=data.kadi;

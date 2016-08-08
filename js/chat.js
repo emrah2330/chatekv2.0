@@ -159,6 +159,17 @@ function socketTaraf(kadi){
 					
 		
 });
+
+
+$("input[name=mesaj]").keyup(function(){
+			socket.emit('yazanlar',$("span.kadi").text());
+			socket.on('yazanlarlistele',function(data){
+					$("p.yaziyor").text(data+" şuanda sohbete yazıyor...");
+		setTimeout(function(){
+			$("p.yaziyor").text("");
+		}, 5000);
+				});
+		});
 		
 
 			
