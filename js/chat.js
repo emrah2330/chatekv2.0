@@ -167,7 +167,7 @@ $("input[name=mesaj]").keyup(function(){
 					$("p.yaziyor").text(data+" şuanda sohbete yazıyor...");
 		setTimeout(function(){
 			$("p.yaziyor").text("");
-		}, 5000);
+		}, 3000);
 				});
 		});
 		
